@@ -2,7 +2,7 @@
   "name": "openapi-ts-axios",
   "private": false,
   "description": "An intelligent, type-safe Axios wrapper powered by OpenAPI schemas.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "yikenman",
   "license": "MIT",
   "exports": {

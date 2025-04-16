@@ -15,7 +15,7 @@ import type {
 import { getMethodType } from '../utils';
 import { buildArgs } from './build-args';
 
-type OpenApiStyleInstanceMethod<
+export type OpenApiStyleInstanceMethod<
   Paths extends Record<string, Record<HttpMethod, {}>>,
   Method extends HttpMethod,
   Media extends MediaType,

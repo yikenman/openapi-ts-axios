@@ -15,7 +15,7 @@ import type {
 import { getMethodType } from '../utils';
 import { buildArgs } from './build-args';
 
-type InstanceMethod<
+export type InstanceMethod<
   Paths extends Record<string, Record<HttpMethod, {}>>,
   Method extends HttpMethod,
   Media extends MediaType,

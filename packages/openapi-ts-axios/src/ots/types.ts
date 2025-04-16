@@ -32,7 +32,7 @@ export type RequestOptions<T> = ParamsOption<T> & RequestBodyOption<T>;
 
 export type FetchOptions<T> = RequestOptions<T>;
 
-type BodyType<T = unknown> = {
+export type BodyType<T = unknown> = {
   json: T;
   text: Awaited<ReturnType<Response['text']>>;
   blob: Awaited<ReturnType<Response['blob']>>;

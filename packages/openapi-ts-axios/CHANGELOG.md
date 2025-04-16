@@ -1,5 +1,11 @@
 # openapi-ts-axios
 
+## 1.0.1
+
+### Patch Changes
+
+- 78e7cfe: fix: call axios as function
+
 ## 1.0.0
 
 ### Major Changes

@@ -33,7 +33,7 @@ export type InstanceMethod<
   OD = O['body'],
   OP extends PickOptionParams<NonNullable<O['params']>> = PickOptionParams<NonNullable<O['params']>>,
   IT = IfNotUnderfined<T, T, IfNotUnderfined<PM, NonNullable<FetchResponse<PM, O, Media>['data']>, undefined>>,
-  ID = IfNotUnderfined<D, D, OD> & {},
+  ID = IfNotUnderfined<D, D, IfNotUnderfined<OD, OD, {}>> & {},
   FD extends ID = ID,
   IR = IfNotUnderfined<R, R, OpenApiAxiosResponse<IT, FD, OP>>,
   FR extends IR = IR

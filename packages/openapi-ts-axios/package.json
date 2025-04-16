@@ -1,0 +1,44 @@
+{
+  "name": "openapi-ts-axios",
+  "private": false,
+  "description": " ",
+  "version": "0.0.0",
+  "author": "yikenman",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    }
+  },
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rimraf dist && tsc -p tsconfig.build.json",
+    "dev": "rimraf dist && tsc -p tsconfig.build.json --watch",
+    "test": "vitest run",
+    "test:ci": "vitest run --coverage",
+    "test:cov": "vitest run --coverage",
+    "test:watch": "vitest --watch"
+  },
+  "devDependencies": {
+    "@vitest/coverage-istanbul": "3.1.1",
+    "openapi-typescript-helpers": "^0.0.15",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.3.3",
+    "vite": "^6.2.5",
+    "vitest": "^3.1.1"
+  },
+  "engines": {
+    "node": ">=20.13.0"
+  },
+  "homepage": "https://github.com/yikenman/openapi-ts-axios",
+  "keywords": [],
+  "peerDependencies": {
+    "axios": "^1.8.4"
+  },
+  "repository": "https://github.com/yikenman/openapi-ts-axios",
+  "type": "module"
+}

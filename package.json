@@ -1,5 +1,5 @@
 {
-  "name": "openapi-typescript-axios",
+  "name": "openapi-ts-axios",
   "private": true,
   "description": " ",
   "version": "0.0.0",
@@ -8,7 +8,7 @@
   "scripts": {
     "build": "turbo run build",
     "check": "syncpack format && echo ''",
-    "ci:publish": "cp ./README.md ./packages/openapi-typescript-axios/README.md && changeset publish",
+    "ci:publish": "cp ./README.md ./packages/openapi-ts-axios/README.md && changeset publish",
     "ci:version": "changeset version && pnpm install --frozen-lockfile=false",
     "dev": "turbo run dev",
     "format": "biome check .",
@@ -28,7 +28,7 @@
   "engines": {
     "node": ">=20.13.0"
   },
-  "homepage": "https://github.com/yikenman/openapi-typescript-axios",
+  "homepage": "https://github.com/yikenman/openapi-ts-axios",
   "packageManager": "pnpm@9.12.1",
-  "repository": "https://github.com/yikenman/openapi-typescript-axios"
+  "repository": "https://github.com/yikenman/openapi-ts-axios"
 }

@@ -101,13 +101,17 @@ export function OpenApiStyleAxios<Paths extends {}>(...args: any[]): OpenAPIStyl
       };
     },
     apply(target, thisArg, args: [any?, any?]) {
-      const methodType = args.length;
+      const methodType = args.length ? (typeof args[0] === 'string' ? 2 : 1) : 0;
 
       if (!methodType) {
         return Reflect.apply(target, thisArg, args);
       }
 
-      const newArgs = buildArgs(args, methodType, defaultConfigs);
+      const newArgs = buildArgs(
+        methodType === 2 ? [args[0], undefined, args[1]] : [undefined, undefined, args[0]],
+        methodType,
+        defaultConfigs
+      );
 
       return Reflect.apply(target, thisArg, newArgs);
     }

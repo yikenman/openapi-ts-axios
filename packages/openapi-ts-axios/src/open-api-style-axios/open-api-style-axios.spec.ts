@@ -134,17 +134,39 @@ describe('OpenApiAxios', () => {
     expect(other).toHaveBeenCalledWith(args);
   });
 
-  it('should call buildArgs if calling itself with arguments', async () => {
+  it('should call buildArgs if calling itself with 1 arguments', async () => {
     const customAxiosInstance = vi.fn(axios.create()).mockResolvedValue(true);
 
     const configs = { decompress: true };
     //@ts-ignore
     const instance = OpenApiStyleAxios(customAxiosInstance, configs);
 
-    const args = ['/path'] as const;
+    const args = [{ headers: { h: 1 } }] as const;
     await instance(...args);
 
-    expect(buildArgs).toHaveBeenCalledWith(args, args.length, vi.mocked(mergeConfig).mock.results[0].value);
+    expect(buildArgs).toHaveBeenCalledWith(
+      [undefined, undefined, args[0]],
+      1,
+      vi.mocked(mergeConfig).mock.results[0].value
+    );
+    expect(customAxiosInstance).toHaveBeenCalledWith(...vi.mocked(buildArgs).mock.results[0].value);
+  });
+
+  it('should call buildArgs if calling itself with 2 arguments', async () => {
+    const customAxiosInstance = vi.fn(axios.create()).mockResolvedValue(true);
+
+    const configs = { decompress: true };
+    //@ts-ignore
+    const instance = OpenApiStyleAxios(customAxiosInstance, configs);
+
+    const args = ['/path', { headers: { h: 1 } }] as const;
+    await instance(...args);
+
+    expect(buildArgs).toHaveBeenCalledWith(
+      [args[0], undefined, { headers: { h: 1 } }],
+      2,
+      vi.mocked(mergeConfig).mock.results[0].value
+    );
     expect(customAxiosInstance).toHaveBeenCalledWith(...vi.mocked(buildArgs).mock.results[0].value);
   });
 

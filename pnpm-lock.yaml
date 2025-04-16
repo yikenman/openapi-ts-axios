@@ -30,7 +30,7 @@ importers:
         specifier: ^2.4.4
         version: 2.5.0
 
-  packages/openapi-typescript-axios:
+  packages/openapi-ts-axios:
     dependencies:
       axios:
         specifier: ^1.8.4

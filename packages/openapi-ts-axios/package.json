@@ -1,5 +1,5 @@
 {
-  "name": "openapi-typescript-axios",
+  "name": "openapi-ts-axios",
   "private": false,
   "description": " ",
   "version": "0.0.0",
@@ -34,11 +34,11 @@
   "engines": {
     "node": ">=20.13.0"
   },
-  "homepage": "https://github.com/yikenman/openapi-typescript-axios",
+  "homepage": "https://github.com/yikenman/openapi-ts-axios",
   "keywords": [],
   "peerDependencies": {
     "axios": "^1.8.4"
   },
-  "repository": "https://github.com/yikenman/openapi-typescript-axios",
+  "repository": "https://github.com/yikenman/openapi-ts-axios",
   "type": "module"
 }

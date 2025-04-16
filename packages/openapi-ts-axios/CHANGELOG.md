@@ -1,5 +1,13 @@
 # openapi-ts-axios
 
+## 1.0.3
+
+### Patch Changes
+
+- bc7c88a: fix: data should not be undefined when no path match
+- bc7c88a: fix: export types
+- bc7c88a: fix: update deps
+
 ## 1.0.2
 
 ### Patch Changes

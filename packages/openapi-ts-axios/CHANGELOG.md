@@ -1,5 +1,12 @@
 # openapi-ts-axios
 
+## 1.0.2
+
+### Patch Changes
+
+- 1d07f9f: fix: export types
+- 1d07f9f: fix: update deps
+
 ## 1.0.1
 
 ### Patch Changes

@@ -35,13 +35,13 @@ importers:
       axios:
         specifier: ^1.8.4
         version: 1.8.4
+      openapi-typescript-helpers:
+        specifier: ^0.0.15
+        version: 0.0.15
     devDependencies:
       '@vitest/coverage-istanbul':
         specifier: 3.1.1
         version: 3.1.1(vitest@3.1.1(yaml@2.7.1))
-      openapi-typescript-helpers:
-        specifier: ^0.0.15
-        version: 0.0.15
       rimraf:
         specifier: ^6.0.1
         version: 6.0.1

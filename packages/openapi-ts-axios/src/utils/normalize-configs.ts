@@ -1,4 +1,6 @@
+import type { AxiosRequestConfig } from 'axios';
 import type { NormalizedConfigs, OpenAPIAxiosRequestConfig } from '../types';
+import type { DefaultOptionParams } from '../types';
 
 export const normalizeConfigs = (configs?: OpenAPIAxiosRequestConfig) => {
   let axiosConfigs: NormalizedConfigs['axiosConfigs'] = {};

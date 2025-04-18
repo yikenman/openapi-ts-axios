@@ -1,5 +1,11 @@
 # openapi-ts-axios
 
+## 1.0.4
+
+### Patch Changes
+
+- 501c704: fix types
+
 ## 1.0.3
 
 ### Patch Changes
